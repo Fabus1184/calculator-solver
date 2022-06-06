@@ -271,5 +271,6 @@ main = do
                         . cpn [0 .. length bs' - 1]
                         $ n
             --liftIO . mapM_ print . filter (\(_, (_, x)) -> isJust x) . map (\y -> runState (eval y) (bs, Just s)) . cpn [0 .. length bs - 1] $ n
-            liftIO . putStrLn $ maybe "No Solution" (intercalate " | " . fst) y
+            liftIO $ putStrLn ""
+            liftIO . putStrLn $ maybe "No Solution" ((++) "Solution: " . intercalate " | " . fst) y
     main
