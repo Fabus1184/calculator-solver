@@ -32,5 +32,6 @@ executable calculator-solver
         , transformers
         , lens
         , extra
+        , pretty-terminal
     hs-source-dirs:   app
     default-language: Haskell2010
