@@ -23,15 +23,18 @@ executable calculator-solver
     main-is:          Main.hs
 
     -- Modules included in this executable, other than Main.
-    -- other-modules:
+    other-modules:    Calculator, Parser
 
     -- LANGUAGE extensions used by modules in this package.
     -- other-extensions:
-    build-depends:    base ^>=4.14.3.0
-        , text
-        , transformers
-        , lens
-        , extra
-        , pretty-terminal
+    build-depends:    base ^>= 4.16.4.0
+                    , extra
+                    , lens
+                    , pretty-terminal
+                    , text
+                    , transformers ^>= 0.6.1.0
+
     hs-source-dirs:   app
     default-language: Haskell2010
+
+    ghc-options:     -Wall -Wextra -threaded -rtsopts -with-rtsopts=-N
